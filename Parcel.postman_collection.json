@@ -34,7 +34,7 @@
 					"formdata": [
 						{
 							"key": "registration_plate",
-							"value": "test-321",
+							"value": "test-123",
 							"type": "text"
 						}
 					]
@@ -59,7 +59,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/trucks/test-123/",
+					"raw": "http://localhost:8080/trucks/test-321/",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -67,7 +67,7 @@
 					"port": "8080",
 					"path": [
 						"trucks",
-						"test-123",
+						"test-321",
 						""
 					]
 				}
@@ -100,6 +100,27 @@
 						"truck",
 						"test-321",
 						"load"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "unloadTruck",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/truck/test-321/unload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"truck",
+						"test-321",
+						"unload"
 					]
 				}
 			},

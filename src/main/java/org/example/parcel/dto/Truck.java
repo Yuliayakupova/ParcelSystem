@@ -35,4 +35,8 @@ public class Truck {
     public void addParcel(Parcel parcel) {
         parcels.add(parcel);
     }
+
+    public void unload() {
+        parcels.clear();
+    }
 }

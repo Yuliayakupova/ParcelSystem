@@ -77,4 +77,22 @@ public class TruckController {
 
         return truck;
     }
+
+    /*
+    Method for creating a PUT request to unload truck.
+     */
+    @PutMapping("/truck/{registrationPlate}/unload")
+    Truck unloadTruck(@PathVariable String registrationPlate) throws ResponseStatusException {
+
+        final Truck truck = repository.getTruckByRegistrationPlate(registrationPlate);
+
+        if(truck == null){
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND,"Truck is not found");
+        }
+
+
+        truck.unload();
+
+        return truck;
+    }
 }
